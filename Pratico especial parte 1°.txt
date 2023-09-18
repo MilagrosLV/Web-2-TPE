@@ -1,0 +1,23 @@
+.Nombre del proyecto: "Biblioteca Alejandría"
+
+Miebro del grupo:
+-Rio Gustavo Nahuel (riogustavo2001@gmail.com)
+-LOPEZ VILACLARA, MILAGROS (lopezvmilagros@gmail.com)
+
+De qué se trata nuestra idea:
+En nuestra plataforma, los usuarios pueden sumergirse en un vasto universo de los libros, meticulosamente organizados según su género literario. Esto simplificara la búsqueda de obras que se ajusten a las preferencias de cada lector. Además, destacamos las sagas y series literarias, lo que permite a los amantes de las historias continuadas encontrar de manera sencilla todas las entregas relacionadas.
+
+Se mencionara a los autores, quienes son figuras fundamentales en el mundo literario. Los lectores tienen la oportunidad de explorar las obras de sus escritores favoritos y descubrir nuevas creaciones de autores emergentes.
+
+Para aquellos interesados en adquirir un libro, nuestra plataforma proporciona información detallada que incluye precios actualizados y simopsis consisas que ofrecen una visión general de la trama y el contenido. Cada libro va acompañado de su correspondiente imagen de portada, lo que proporciona una experiencia visual atractiva y ayuda a los lectores a identificar de manera rápida el libro que desean explorar.
+
+Para finañizar, nuestra plataforma, la "Biblioteca Alejandría," se presenta como un recurso completo para los amantes de la literatura. Ofrecemos un amplio catálogo de libros organizados por género y autores, además de proporcionar información detallada sobre cada obra, incluyendo precios y resúmenes. Todo esto se complementa con atractivas imágenes de portada que hacen que la experiencia de explorar libros sea aún más enriquecedora.
+
+
+
+
+
+
+
+
+
