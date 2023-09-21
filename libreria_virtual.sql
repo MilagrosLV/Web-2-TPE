@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `autores` (
   `id_autor` int(11) NOT NULL,
   `nombre` int(11) NOT NULL,
-  `criticas` varchar(80) NOT NULL,
+  `críticas` varchar(80) NOT NULL,
   `generos_asociados` varchar(50) NOT NULL,
   `obras` varchar(5000) NOT NULL,
   `imagen_autor` varchar(150) NOT NULL
@@ -43,9 +43,9 @@ CREATE TABLE `autores` (
 --
 
 CREATE TABLE `libros` (
-  `ID_Libro` int(11) NOT NULL,
-  `Generos` varchar(20) NOT NULL,
-  `criticas` int(5) NOT NULL,
+  `id_libro` int(11) NOT NULL,
+  `géneros` varchar(20) NOT NULL,
+  `críticas` int(5) NOT NULL,
   `autores` int(20) NOT NULL,
   `portada` varchar(150) NOT NULL,
   `comentarios` varchar(50) NOT NULL
@@ -58,7 +58,7 @@ CREATE TABLE `libros` (
 --
 
 CREATE TABLE `punto de guardado` (
-  `ID_usuario` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   `ID_lectura` int(11) NOT NULL,
   `punto texto` varchar(20) NOT NULL,
   `pagina` varchar(20) NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE `punto de guardado` (
 --
 
 CREATE TABLE `usuarios` (
-  `ID_usuario` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   `imagen_perfil` varchar(150) NOT NULL,
   `correo eletronico` varchar(30) NOT NULL,
   `favoritos` varchar(60) NOT NULL,
@@ -94,22 +94,22 @@ ALTER TABLE `autores`
 -- Indices de la tabla `libros`
 --
 ALTER TABLE `libros`
-  ADD PRIMARY KEY (`ID_Libro`),
-  ADD KEY `ID_Libro` (`ID_Libro`);
+  ADD PRIMARY KEY (`id_libro`),
+  ADD KEY `id_libro` (`id_libro`);
 
 --
 -- Indices de la tabla `punto de guardado`
 --
 ALTER TABLE `punto de guardado`
-  ADD KEY `ID_usuario` (`ID_usuario`),
+  ADD KEY `id_usuario` (`id_usuario`),
   ADD KEY `ID_lectura` (`ID_lectura`);
 
 --
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`ID_usuario`),
-  ADD KEY `ID_usuario` (`ID_usuario`);
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD KEY `id_usuario` (`id_usuario`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -125,13 +125,13 @@ ALTER TABLE `autores`
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `ID_Libro` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_libro` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -141,19 +141,19 @@ ALTER TABLE `usuarios`
 -- Filtros para la tabla `autores`
 --
 ALTER TABLE `autores`
-  ADD CONSTRAINT `autores_ibfk_1` FOREIGN KEY (`id_autor`) REFERENCES `libros` (`ID_Libro`);
+  ADD CONSTRAINT `autores_ibfk_1` FOREIGN KEY (`id_autor`) REFERENCES `libros` (`id_libro`);
 
 --
 -- Filtros para la tabla `libros`
 --
 ALTER TABLE `libros`
-  ADD CONSTRAINT `libros_ibfk_1` FOREIGN KEY (`ID_Libro`) REFERENCES `punto de guardado` (`ID_lectura`);
+  ADD CONSTRAINT `libros_ibfk_1` FOREIGN KEY (`id_libro`) REFERENCES `punto de guardado` (`ID_lectura`);
 
 --
 -- Filtros para la tabla `punto de guardado`
 --
 ALTER TABLE `punto de guardado`
-  ADD CONSTRAINT `punto de guardado_ibfk_1` FOREIGN KEY (`ID_usuario`) REFERENCES `usuarios` (`ID_usuario`);
+  ADD CONSTRAINT `punto de guardado_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
