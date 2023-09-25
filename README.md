@@ -11,11 +11,11 @@
 
 # Diagrama de entidad relación (DER):
   
-  *- Opción 1:*
+  *- Opción 1: phpMyAdmin*
   
   ![Alt text](DER_lucidchart.png)
 
-  *- Opción 2:*
+  *- Opción 2: Lucidchart*
   
   ![Alt text](DER_phpMyAdmin.png)
 
