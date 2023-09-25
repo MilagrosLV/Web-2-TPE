@@ -14,11 +14,11 @@ _Integrantes:_
 
 # Diagrama de entidad relación (DER):
   
-  *- Opción 1: phpMyAdmin*
+  *- Opción 1: Lucidchart*
   
   ![Alt text](DER_lucidchart.png)
 
-  *- Opción 2: Lucidchart*
+  *- Opción 2: phpMyAdmin*
   
   ![Alt text](DER_phpMyAdmin.png)
 
