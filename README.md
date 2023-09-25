@@ -10,7 +10,9 @@
   Para finañizar, nuestra plataforma, la "Biblioteca Alejandría," se presenta como un recurso completo para los amantes de la literatura. Ofrecemos un amplio catálogo de libros organizados por género y autores, además de proporcionar información detallada sobre cada obra, incluyendo precios y resúmenes. Todo esto se complementa con atractivas imágenes de portada que hacen que la experiencia de explorar libros sea aún más enriquecedora.
 
 # Diagrama de entidad relación (DER):
+  
   *- Opción 1:*
+  
   ![Alt text](DER_lucidchart.png)
 
   *- Opción 2:*
