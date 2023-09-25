@@ -14,5 +14,6 @@
   ![Alt text](DER_lucidchart.png)
 
   *- Opción 2:*
+  
   ![Alt text](DER_phpMyAdmin.png)
 
