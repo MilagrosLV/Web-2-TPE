@@ -2,6 +2,7 @@
 *Proyecto:* Biblioteca Alejandría.
 
 _Integrantes:_
+
   - Rio, Gustavo Nahuel (riogustavo2001@gmail.com)
   - López Vilaclara, Milagros (lopezvmilagros@gmail.com)
 
