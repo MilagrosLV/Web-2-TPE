@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-09-2023 a las 23:14:36
+-- Tiempo de generación: 04-10-2023 a las 23:17:42
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `librería_alejandría`
 --
+CREATE DATABASE IF NOT EXISTS `librería_alejandría` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `librería_alejandría`;
 
 -- --------------------------------------------------------
 
