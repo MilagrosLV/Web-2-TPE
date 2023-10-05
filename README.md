@@ -15,6 +15,5 @@ _Integrantes:_
 # Diagrama de entidad relación (DER):
   
   *- DER Modificado - librería_alejandría (1).sql*
+    ![Alt text](<DER_phpMyAdmin (1).png>)
   
-  ![Alt text](DER_phpMyAdmin (1).png)
-
