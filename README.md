@@ -14,11 +14,7 @@ _Integrantes:_
 
 # Diagrama de entidad relación (DER):
   
-  *- Opción 1: Lucidchart*
+  *- DER Modificado - librería_alejandría (1).sql*
   
-  ![Alt text](DER_lucidchart.png)
-
-  *- Opción 2: phpMyAdmin*
-  
-  ![Alt text](DER_phpMyAdmin.png)
+  ![Alt text](DER_phpMyAdmin (1).png)
 

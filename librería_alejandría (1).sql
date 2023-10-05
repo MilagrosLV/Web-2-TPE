@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-10-2023 a las 23:17:42
+-- Tiempo de generación: 06-10-2023 a las 00:29:44
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -49,36 +49,12 @@ INSERT INTO `autores` (`id_autor`, `nombre`, `libros`, `géneros`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `lectura`
---
-
-CREATE TABLE `lectura` (
-  `id_usuario` int(11) NOT NULL,
-  `id_lectura` int(11) NOT NULL,
-  `hora_última_visita` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `nro_página` int(11) NOT NULL,
-  `id_libro` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `lectura`
---
-
-INSERT INTO `lectura` (`id_usuario`, `id_lectura`, `hora_última_visita`, `nro_página`, `id_libro`) VALUES
-(3, 4, '2023-09-29 20:59:09', 92, 3),
-(2, 5, '2023-09-29 20:59:09', 142, 2),
-(1, 6, '2023-09-29 21:00:37', 623, 4);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `libros`
 --
 
 CREATE TABLE `libros` (
   `título` varchar(100) NOT NULL,
   `autor` varchar(100) NOT NULL,
-  `edición` varchar(100) NOT NULL,
   `género` varchar(50) NOT NULL,
   `id_libro` int(11) NOT NULL,
   `id_autor` int(11) NOT NULL
@@ -88,11 +64,11 @@ CREATE TABLE `libros` (
 -- Volcado de datos para la tabla `libros`
 --
 
-INSERT INTO `libros` (`título`, `autor`, `edición`, `género`, `id_libro`, `id_autor`) VALUES
-('El Hijo de la Profecía', 'Juliet Marilliet', '1ra edición: julio de 2007', 'Fantasía', 1, 4),
-('Los Juegos del Hambre', 'Suzanne Collins', '9na reimpresión: septiembre de 2013', 'Ciencia Ficción', 2, 2),
-('Los 100', 'Kass Morgan', '1ra edición: noviembre de 2014', 'Ciencia Ficción', 3, 3),
-('El Camino de los Reyes', 'Brandon Sanderson', '1ra edición: octubre de 2021', 'Fantasía', 4, 1);
+INSERT INTO `libros` (`título`, `autor`, `género`, `id_libro`, `id_autor`) VALUES
+('El Hijo de la Profecía', 'Juliet Marilliet', 'Fantasía', 1, 4),
+('Los Juegos del Hambre', 'Suzanne Collins', 'Ciencia Ficción', 2, 2),
+('Los 100', 'Kass Morgan', 'Ciencia Ficción', 3, 3),
+('El Camino de los Reyes', 'Brandon Sanderson', 'Fantasía', 4, 1);
 
 -- --------------------------------------------------------
 
@@ -105,7 +81,7 @@ CREATE TABLE `usuario` (
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `contraseña` varchar(50) NOT NULL
+  `contraseña` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -129,15 +105,6 @@ ALTER TABLE `autores`
   ADD KEY `libros` (`libros`(768)),
   ADD KEY `géneros` (`géneros`),
   ADD KEY `nombre` (`nombre`);
-
---
--- Indices de la tabla `lectura`
---
-ALTER TABLE `lectura`
-  ADD PRIMARY KEY (`id_lectura`),
-  ADD KEY `id_usuario` (`id_usuario`),
-  ADD KEY `libro` (`id_libro`),
-  ADD KEY `libro_2` (`id_libro`);
 
 --
 -- Indices de la tabla `libros`
@@ -165,12 +132,6 @@ ALTER TABLE `autores`
   MODIFY `id_autor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT de la tabla `lectura`
---
-ALTER TABLE `lectura`
-  MODIFY `id_lectura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
@@ -185,13 +146,6 @@ ALTER TABLE `usuario`
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `lectura`
---
-ALTER TABLE `lectura`
-  ADD CONSTRAINT `fk_lectura` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fk_libro` FOREIGN KEY (`id_libro`) REFERENCES `libros` (`id_libro`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `libros`
