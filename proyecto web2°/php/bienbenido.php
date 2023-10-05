@@ -1,20 +1,3 @@
-<?php 
-    session_start();
-
-    if(!isset($_SESSION['usuario'])){
-        echo '
-        <script>
-        alert("Por favor debe iniciar como usuario ");
-        window.location = "../index.php";
-        </script>
-        ';
-        session_destroy();
-        die();
-    }
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +7,50 @@
     <link rel="icon" href="../images/logo2.ico">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos2.css">
 </head>
 <body>
-    <h1>Bienvenidos al mundo XD</h1>
-    <a href="php/cerrar_sesion.php">cerrar sesion</a>
+    <header>
+        <div class="superior">
+            <div class="logo-pagina">
+                <h1>Libreria alejandría</h1>
+                <img src="../images/logo2.jpg"  class="logo" alt="">
+            </div>
+            <div>
+            <a class="registro" href="../html/index.php"><h3>administrador</h2></a>
+            </div>
+        </div>
+        <div class="inferior">
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="../php/bienbenido.php"><h4>inicio</h4></a></li>
+                        <li><a href="#"><h4>biblioteca</h4></a></li>
+                        <li><a href="#"><h4>generos</h4></a>
+                            <ul>
+                                <li><a href="#"><h4>aventuras</h4></a></li>
+                                <li><a href="#"><h4>misterios</h4></a></li>
+                                <li><a href="#"><h4>romances</h4></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+        <div class="contenido-principal">
+            <div class="contenedor">
+                <h1>Bienvenido a la Biblioteca de Alejandría</h1>
+                <p>La Biblioteca de Alejandría te da la bienvenida a su plataforma de lectura en línea. Somos una biblioteca virtual comprometida con proporcionar acceso a una amplia variedad de libros y recursos para enriquecer tu experiencia de lectura.</p>
+                <p>Nuestra colección abarca desde clásicos de la literatura hasta obras contemporáneas en una amplia gama de géneros. Explora nuestras secciones y descubre historias emocionantes, conocimientos profundos y aventuras inolvidables.</p>
+                <img src="../images/bg.jpg" alt="Imagen de la biblioteca" />
+                <p>Ya seas un ávido lector en busca de tu próximo libro favorito o un estudiante buscando recursos para tu investigación, la Biblioteca de Alejandría está aquí para satisfacer tus necesidades de lectura y aprendizaje en línea.</p>
+                <p>Explora nuestro catálogo, busca por género, autor o palabra clave, y disfruta de la comodidad de acceder a una biblioteca completa desde la comodidad de tu hogar.</p>
+                <p>¡Esperamos que disfrutes de tu tiempo en nuestra biblioteca virtual y que encuentres inspiración en las páginas de nuestros libros!</p>
+            </div>        
+        </div>
+    <footer>
+        <h5>esta pagina fue creada para ser una libreria virtual para leer y recomendar libro (fue creada el dia 05/10/2023)</h5>
+    </footer>
 </body>
 </html>
