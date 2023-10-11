@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-10-2023 a las 00:29:44
+-- Tiempo de generación: 11-10-2023 a las 16:10:08
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -57,18 +57,19 @@ CREATE TABLE `libros` (
   `autor` varchar(100) NOT NULL,
   `género` varchar(50) NOT NULL,
   `id_libro` int(11) NOT NULL,
-  `id_autor` int(11) NOT NULL
+  `id_autor` int(11) NOT NULL,
+  `img_portada` blob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `libros`
 --
 
-INSERT INTO `libros` (`título`, `autor`, `género`, `id_libro`, `id_autor`) VALUES
-('El Hijo de la Profecía', 'Juliet Marilliet', 'Fantasía', 1, 4),
-('Los Juegos del Hambre', 'Suzanne Collins', 'Ciencia Ficción', 2, 2),
-('Los 100', 'Kass Morgan', 'Ciencia Ficción', 3, 3),
-('El Camino de los Reyes', 'Brandon Sanderson', 'Fantasía', 4, 1);
+INSERT INTO `libros` (`título`, `autor`, `género`, `id_libro`, `id_autor`, `img_portada`) VALUES
+('El Hijo de la Profecía', 'Juliet Marilliet', 'Fantasía', 1, 4, ''),
+('Los Juegos del Hambre', 'Suzanne Collins', 'Ciencia Ficción', 2, 2, ''),
+('Los 100', 'Kass Morgan', 'Ciencia Ficción', 3, 3, ''),
+('El Camino de los Reyes', 'Brandon Sanderson', 'Fantasía', 4, 1, '');
 
 -- --------------------------------------------------------
 
