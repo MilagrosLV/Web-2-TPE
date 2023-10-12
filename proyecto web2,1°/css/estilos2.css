@@ -20,19 +20,6 @@
     max-height: 15000px;
 }
 
-.contenido-principal-2 {
-    background-image: url('../images/fondo_traparente.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center center; 
-    background-attachment: fixed;
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 20px; 
-    margin-top: 172px;
-    width: auto;
-    height: 5000px;
-}
-
 header{
     width: 100%;
     position: fixed;
@@ -303,6 +290,60 @@ footer {
     font-size: 20px;
     text-align: start;
   }
+
+  button{
+    padding: 10px 40px;
+    background: black;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: gold;
+    outline: none;
+    transition: all 300ms;
+  }
+
+  button:hover{
+    background: gold;
+    color: #000000;
+}
+
+#nuevoLibroForm {
+  color: #000; /* Texto en negro */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  height: 600px;
+  max-width: 600px; /* Establece un ancho máximo para evitar que el formulario sea demasiado ancho */
+  margin: 0 auto; /* Centra el formulario en la página */
+}
+#nuevoLibroForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Texto en negrita */
+  color: #000; /* Texto en negro */
+}
+
+
+#nuevoLibroForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#nuevoLibroForm input,
+#nuevoLibroForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #000; /* Borde negro */
+    background-color: #f3e48d; /* Fondo dorado */
+    color: #000; /* Texto en negro */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 18px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+}
+
+
 
 
 
