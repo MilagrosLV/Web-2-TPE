@@ -10,43 +10,47 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <main>
-        <div class="conteiner">
-            <div class="back-box">
-                <div class="back-box-login">
-                    <h3>¿Ya tienes una cuenta?</h3>
-                    <p>Inicia sesión para entrar en la página</p>
-                        <button id="btn_longin">Iniciar Sesión</button>
-                </div>
-                <div class="back-box-register">
-                    <h3>¿Aún no tienes una cuenta?</h3>
-                    <p>Regístrate para que puedas iniciar sesión</p>
-                        <button id="btn_register">Regístrarse</button>
-                </div>
-            </div>
 
-        <!--Formulario de Log In y Register-->
-            <div class="conteiner-login-register">
-            <!--Log In-->
-                <form action="login_be.php" method="POST" class="form-login">
-                    <h2>Iniciar Sesión</h2>
+        <main>
+
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                        <h3>¿Ya tienes una cuenta?</h3>
+                        <p>Inicia sesión para entrar en la página</p>
+                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Aún no tienes una cuenta?</h3>
+                        <p>Regístrate para que puedas iniciar sesión</p>
+                        <button id="btn__registrarse">Regístrarse</button>
+                    </div>
+                </div>
+
+                <!--Formulario de Login y registro-->
+                <div class="contenedor__login-register">
+                    <!--Login-->
+                    <form action="../php/login_be.php" method="POST" class="formulario__login">
+                        <h2>Iniciar Sesión</h2>
                         <input type="text" name="Correo" placeholder="Correo Electronico">
                         <input type="password" name="Contraseña" placeholder="Contraseña">
-                            <button>Entrar</button>
-                </form>
+                        <button>Entrar</button>
+                    </form>
 
-            <!--register-->
-                <form action="registro_be.php" method="POST" class="form-register">
-                    <h2>Regístrarse</h2>
+                    <!--Register-->
+                    <form action="../php/registro_be.php" method="POST" class="formulario__register">
+                        <h2>Regístrarse</h2>
                         <input type="text" placeholder="Nombre completo" name="Nombre">
                         <input type="text" placeholder="Correo Electronico" name="Correo">
                         <input type="text" placeholder="Usuario" name="Usuario">
                         <input type="password" placeholder="Contraseña" name="Contraseña">
-                            <button>Regístrarse</button>
-                </form>
+                        <button>Regístrarse</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </main>
-    <script src="js/script.js"></script>
+
+        </main>
+
+        <script src="js/script.js"></script>
 </body>
 </html>

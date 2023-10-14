@@ -10,13 +10,13 @@ $verificar_login = mysqli_query($conexion, "SELECT * FROM usuarios WHERE correo=
 
 if(mysqli_num_rows($verificar_login) > 0){
     $_SESSION['usuario'] = $correo;
-    header("location: ../bienbenido.php");
+    header("location: bienbenido.php");
     exit; 
     } else{
     echo '
     <script>
     alert("Los datos de usuarios no se registraron y intente otraves oregistrese en la pagina");
-    window.location = "../index.php";
+    window.location = "index.php";
     </script>
     ';
     exit;  
