@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería Alejandría</title>
+    <link rel="icon" href="images/logo2.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="menu container">
+            <a href="#" class="logo"><img src="images/logo2.jpg" alt="Logo de libro negro"></a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icon" alt="iconó de menú">
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Géneros</a></li>
+                    <li><a href="#">Ingreso Administrativo</a></li>
+                </ul>
+            </nav>
+
+            <div class="trolley">
+                <ul>
+                    <li class="submenu">
+                        <img src="images/car.svg" id="img-trolley" alt="icono de trolley de compras">
+                        <div id="trolley">
+                            <table id="trolley-list">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="empty-trolley" class="btn-2">Vaciar carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-content container">
+            <h1>Librería Alejandría</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eos debitis fugiat adipisci maxime, fuga
+                dolore praesentium dolorem! Repellendus necessitatibus sapiente sunt iure. Possimus assumenda odit
+                aliquid rem mollitia doloribus?
+            </p>
+
+            <div class="botons">
+                <a href="#" class="btn-1">Más Información</a>
+            </div>
+
+
+        </div>
+    </header>
+
+    <main>
+        <section class="library container">
+            <div class="fantasy">
+                <div class="book-1" id="f1">
+                    <h3>Inmersete en la aventura</h3>
+                    <hr>
+                    <p>Fantasía</p>
+                </div>
+                <div class="book-2">
+                    <h3>Lee <br> un <br> libro</h3>
+                </div>
+            </div>
+        </section>
+        <section class="books container" id="list-1">
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="book">
+                            <h3>Alicia en el País de las Maravillas - Lewis Carroll</h3>
+                            <p class="price">$7000</p>
+                            <img src="images/fantasía/Alicia en el País de las Maravillas - Lewis Carroll.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quis ipsa, cupiditate
+                                expedita tempore commodi autem impedit, vitae in nulla consequuntur reprehenderit recusandae
+                                modi id iste beatae tempora? Sapiente, officiis.
+                            </p>
+                            <a href="#" class="add-trolley btn-2" data-id="1">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book">
+                            <h3>Su Peor Pesadilla - Andrea Mara</h3>
+                            <p class="price">$8000</p>
+                            <img src="images/misterio/Su Peor Pesadilla - Andrea Mara.webp" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quis ipsa, cupiditate
+                                expedita tempore commodi autem impedit, vitae in nulla consequuntur reprehenderit recusandae
+                                modi id iste beatae tempora? Sapiente, officiis.
+                            </p>
+                            <a href="#" class="add-trolley btn-2" data-id="2">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book">
+                            <h3>La Ley del Padre - Carlos Augusto Casas</h3>
+                            <p class="price">$5000</p>
+                            <img src="images/misterio/La Ley del Padre - Carlos Augusto Casas.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quis ipsa, cupiditate
+                                expedita tempore commodi autem impedit, vitae in nulla consequuntur reprehenderit recusandae
+                                modi id iste beatae tempora? Sapiente, officiis.
+                            </p>
+                            <a href="#" class="add-trolley btn-2" data-id="3">Agregar al carrito</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="library container">
+            <div class="mistery">
+                <div class="book-2">
+                    <h3>Vive <br> el <br> suspenso</h3>
+                </div>
+                <div class="book-1" id="m1">
+                    <h3>Revela secretos</h3>
+                    <hr>
+                    <p>Misterio</p>
+                </div>
+            </div>
+
+        </section>
+        <section class="books container" id="list-2">
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="book">
+                            <h3>La Ley del Padre - Carlos Augusto Casas</h3>
+                            <p class="price">$5000</p>
+                            <img src="images/misterio/La Ley del Padre - Carlos Augusto Casas.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quis ipsa, cupiditate
+                                expedita tempore commodi autem impedit, vitae in nulla consequuntur reprehenderit recusandae
+                                modi id iste beatae tempora? Sapiente, officiis.
+                            </p>
+                            <a href="#" class="add-trolley btn-2" data-id="4">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book">
+                            <h3>Mandíbula - Mónica Ojeda</h3>
+                            <p class="price">$7000</p>
+                            <img src="images/misterio/Mandíbula - Mónica Ojeda.webp" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quis ipsa, cupiditate
+                                expedita tempore commodi autem impedit, vitae in nulla consequuntur reprehenderit recusandae
+                                modi id iste beatae tempora? Sapiente, officiis.
+                            </p>
+                            <a href="#" class="add-trolley btn-2" data-id="5">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book">
+                            <h3>Su Peor Pesadilla - Andrea Mara</h3>
+                            <p class="price">$8000</p>
+                            <img src="images/misterio/Su Peor Pesadilla - Andrea Mara.webp" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quis ipsa, cupiditate
+                                expedita tempore commodi autem impedit, vitae in nulla consequuntur reprehenderit recusandae
+                                modi id iste beatae tempora? Sapiente, officiis.
+                            </p>
+                            <a href="#" class="add-trolley btn-2" data-id="6">Agregar al carrito</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="library container">
+            <div class="romance">
+                <div class="book-1" id="r1">
+                    <h3>Encuentra el amor</h3>
+                    <hr>
+                    <p>Romance</p>
+                </div>
+                <div class="book-2">
+                    <h3>Disfruta <br> la <br> experiencia</h3>
+                </div>
+            </div>
+        </section>
+        <section class="books container" id="list-3">
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="book">
+                            <h3>Bajo la Misma Estrella -  John Green</h3>
+                            <p class="price">$7000</p>
+                            <img src="images/romance/Bajo la Misma Estrella -  John Green.jpg" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quis ipsa, cupiditate
+                                expedita tempore commodi autem impedit, vitae in nulla consequuntur reprehenderit recusandae
+                                modi id iste beatae tempora? Sapiente, officiis.
+                            </p>
+                            <a href="#" class="add-trolley btn-2" data-id="7">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book">
+                            <h3>Lo que el Viento se Llevó - Margaret Mitchell</h3>
+                            <p class="price">$8000</p>
+                            <img src="images/romance/Lo que el Viento se Llevó - Margaret Mitchell.webp" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quis ipsa, cupiditate
+                                expedita tempore commodi autem impedit, vitae in nulla consequuntur reprehenderit recusandae
+                                modi id iste beatae tempora? Sapiente, officiis.
+                            </p>
+                            <a href="#" class="add-trolley btn-2" data-id="8">Agregar al carrito</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="book">
+                            <h3>Orgullo  y Prejuicio - Jane Austen</h3>
+                            <p class="price">$5000</p>
+                            <img src="images/romance/Orgullo  y Prejuicio - Jane Austen.webp" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quis ipsa, cupiditate
+                                expedita tempore commodi autem impedit, vitae in nulla consequuntur reprehenderit recusandae
+                                modi id iste beatae tempora? Sapiente, officiis.
+                            </p>
+                            <a href="#" class="add-trolley btn-2" data-id="9">Agregar al carrito</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <div class="links">
+            <div class="link">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li>Gustavo Nahuel Rio</li>
+                    <li>Milagros López Vilaclara</li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Contactenos</h3>
+                <ul>
+                    <li>riogustavo2001@gmail.com</li>
+                    <li>lopezvmilagros@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
