@@ -27,5 +27,4 @@ if($ejecutar){
     </script>
     ';
 }
-mysqli_close($conexion);
 ?>

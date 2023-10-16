@@ -8,16 +8,9 @@
 }
 
 .contenido-principal {
-    background-image: url('../images/fondo_traparente.jpg');
-    background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center center; 
-    background-attachment: fixed;
     background-color: rgba(0, 0, 0, 0.5); 
     padding: 20px; 
     margin-top: 172px;
-    width: auto;
-    max-height: 15000px;
 }
 
 header{
@@ -191,8 +184,8 @@ img {
 
 footer {
     text-align: center;
-    background-color: #000000; /* Color de fondo del footer */
-    color: gold; /* Color del texto en el footer */
+    background-color: #000000;
+    color: gold; 
     padding: 10px;
     margin-top: 0px;
 }
@@ -308,20 +301,20 @@ footer {
 }
 
 #nuevoLibroForm {
-  color: #000; /* Texto en negro */
+  color: #000;
   padding: 20px;
   border-radius: 10px;
   margin: 10px 0;
   height: 600px;
-  max-width: 600px; /* Establece un ancho máximo para evitar que el formulario sea demasiado ancho */
-  margin: 0 auto; /* Centra el formulario en la página */
+  max-width: 600px;
+  margin: 0 auto;
 }
 #nuevoLibroForm label {
   display: block;
   margin-bottom: 10px;
-  font-size: 18px; /* Tamaño de fuente más grande */
-  font-weight: bold; /* Texto en negrita */
-  color: #000; /* Texto en negro */
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
 }
 
 
@@ -334,17 +327,13 @@ footer {
 #nuevoLibroForm textarea {
     width: 100%;
     padding: 10px;
-    border: 3px solid #000; /* Borde negro */
-    background-color: #f3e48d; /* Fondo dorado */
-    color: #000; /* Texto en negro */
+    border: 3px solid #000; 
+    background-color: #f3e48d; 
+    color: #000;
     border-radius: 5px;
     margin-bottom: 10px;
-    font-size: 18px; /* Tamaño de fuente más grande */
-    font-weight: bold; /* Texto en negrita */
+    font-size: 18px;
+    font-weight: bold;
 }
-
-
-
-
 
 
