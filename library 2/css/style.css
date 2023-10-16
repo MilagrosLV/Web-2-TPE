@@ -8,7 +8,12 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: rgb(34, 34, 34);
+    /*background-color: rgb(34, 34, 34);*/
+    background-image: url(../images/black_books.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .container {
