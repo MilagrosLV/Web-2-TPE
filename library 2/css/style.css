@@ -34,9 +34,8 @@ body {
     right: 0;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 1000;
-    background-color: goldenrod;
 }
 
 .logo {
@@ -59,11 +58,15 @@ body {
 }
 
 .menu .navbar ul li a:hover {
-    color: gold;
+    color: goldenrod;
 }
 
 #menu {
     display: none;
+}
+
+.logo img {
+    width: 100px;
 }
 
 .menu-icon {
@@ -87,13 +90,14 @@ body {
     display: block;
     position: absolute;
     right: 0;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     top: 100%;
     z-index: 1;
-    background-color: rgb(82, 80, 80);
+    background-color: rgb(36, 35, 35);
     padding: 20px;
     min-width: 400px;
-    min-height: 400px;
+    min-width: 400px;
+
 }
 
 table {
@@ -172,7 +176,7 @@ th, td {
     width: 50%;
 }
 
-.book-1 h3 {
+#f1 h3 {
     font-size: 20px;
     color: rgb(3, 28, 51);
 
@@ -234,7 +238,7 @@ th, td {
 
 
 .books {
-    padding: 30px 0;
+    padding: 50px 0;
 }
 
 .swiper {
@@ -247,7 +251,11 @@ th, td {
     padding-bottom: 80px;
 }
 
-.swiper-button-prev::after, .swiper-button-next::after {
+.swiper-button-prev::after {
+    font-size: 25px;
+}
+
+.swiper-button-next::after {
     font-size: 25px;
 }
 
@@ -255,7 +263,8 @@ th, td {
     color: goldenrod;
 }
 
-.swiper-pagination {
+.swiper-pagination-bullet {
+    background-color: white;
     opacity: 1;
     top: 50px;
 }
@@ -273,7 +282,15 @@ th, td {
 
 .book h3, .book p {
     font-size: 16px;
+    color: white;
+}
+
+.book h3 {
     margin-bottom: 10px;
+}
+
+.book p {
+    margin-top: 15px;
 }
 
 .book img {
@@ -282,7 +299,6 @@ th, td {
 
 .price {
     font-size: 18px;
-    color: green;
 }
 
 .btn-2, .btn-3 {

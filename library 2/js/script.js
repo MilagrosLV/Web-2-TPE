@@ -1,9 +1,9 @@
-/*Slideers*/
+/*Sliders*/
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
-    /*loop: true,
-    loopFillGroupWithBlank: true,*/
+    loop: true,
+    loopFillGroupWithBlank: true,
     pagination: {
         el:".swiper-pagination",
         clickable: true,
@@ -26,22 +26,23 @@ var swiper = new Swiper(".mySwiper", {
 })
 
 //Trolley
+const trolley = document.getElementById('trolley');
+const items = document.getElementById('list-1');
+const items_2 = document.getElementById('list-2');
+const items_3 = document.getElementById('list-3');
+const list = document.querySelector('#trolley-list tbody');
+const emptyTrolleyBtn = document.getElementById('empty-trolley');
 
-let trolley = document.getElementById('trolley');
-let items_1 = document.getElementById('list-1');
-let items_2 = document.getElementById('list-2');
-let items_3 = document.getElementById('list-3');
-let list = document.querySelector('#trolley-list tbody');
-let emptyTrolley_btn = document.getElementById('empty-trolley');
+addEventListeners();
 
-cargarEventListener();
-
-function cargarEventListener() {
-    items_1.addEventListener('click', buyItem);
+function addEventListener() {
+    items.addEventListener('click', buyItem);
     items_2.addEventListener('click', buyItem);
     items_3.addEventListener('click', buyItem);
 
-    emptyTrolley_btn.addEventListener('click', emptyTrolley);
+    trolley.addEventListener('click', eliminateItem);
+
+    emptyTrolleyBtn.addEventListener('click', emptyTrolley);
 
     document.addEventListener('DOMContentLoaded', readLocalStorage);
 }
@@ -50,13 +51,13 @@ function buyItem(e) {
     e.preventDefault();
 
     if(e.target.classList.contains('add-trolley')) {
-        let item = e.target.parentElement.parentElement;
+        const item = e.target.parentElement.parentElement;
         readItemData(item);
     }
 }
 
 function readItemData(item) {
-    let infoItem = {
+    const infoItem = {
         image: item.querySelector('img').src,
         title: item.querySelector('h3').textContent,
         price: item.querySelector('price').textContent,
@@ -75,16 +76,12 @@ function insertTrolley(item) {
             ${item.title}
         </td>
         <td>
-            <${item.price}
+            ${item.price}
         </td>
         <td>
-            <a hecr="#" class="empty" data-id="${item.image}">X</a>
+            <a herf="#" class="empty" data-id="${item.id}">X</a>
         </td>
-
-
-
-
-    `; //BACKTICKS `````` --> AltGr + } + espacio
+    `; //BACKTICKS `` --> AltGr + } + espacio
     list.appendChild(row);
     saveItemLocalStorage(item);
 }
@@ -124,7 +121,7 @@ function getItemsLocalStorage() {
     if(localStorage.getItem('items') === null) {
         itemsLS = [];
     } else {
-        temsLS = JSON.parse(localStorage.getItem('items'));
+        itemsLS = JSON.parse(localStorage.getItem('items'));
     }
     return itemsLS;
 }
@@ -142,10 +139,10 @@ function readLocalStorage() {
                 ${item.title}
             </td>
             <td>
-                <${item.price}
+                ${item.price}
             </td>
             <td>
-                <a hecr="#" class="empty" data-id="${item.image}">X</a>
+                <a herf="#" class="empty" data-id="${item.id}">X</a>
             </td>
         `;
         list.appendChild(row);
