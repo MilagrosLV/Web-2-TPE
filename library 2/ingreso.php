@@ -27,9 +27,9 @@
                     </div>
                 </div>
 
-                <!--Formulario de Login y registro-->
+                <!--Formulario de Log In y Register-->
                 <div class="contenedor__login-register">
-                    <!--Login-->
+                    <!--Log In-->
                     <form action="../php/login_be.php" method="POST" class="formulario__login">
                         <h2>Iniciar Sesión</h2>
                         <input type="text" name="Correo" placeholder="Correo Electronico">
