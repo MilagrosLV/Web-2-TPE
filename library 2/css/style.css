@@ -336,6 +336,7 @@ th, td {
 @media (max-width: 991px) {
     .menu {
         padding: 30px;
+        justify-content: space-between;
     }
     .menu label {
         display: initial;
