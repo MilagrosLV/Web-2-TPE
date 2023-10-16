@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-10-2023 a las 23:13:50
+-- Tiempo de generación: 16-10-2023 a las 23:47:50
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -30,10 +30,12 @@ USE `registro_inicio`;
 --
 
 CREATE TABLE `libros` (
+  `id_libro` int(11) NOT NULL,
   `titulo` varchar(30) NOT NULL,
-  `descripcion` varchar(200) NOT NULL,
-  `autor,` varchar(15) NOT NULL,
-  `imagen` varchar(150) NOT NULL
+  `sinopsis` varchar(200) NOT NULL,
+  `autor` varchar(15) NOT NULL,
+  `imagen` blob NOT NULL,
+  `precio` decimal(10,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
@@ -66,6 +68,12 @@ INSERT INTO `usuarios` (`ID`, `Nombre_completo`, `Correo_Eletronico`, `Usuarios`
 --
 
 --
+-- Indices de la tabla `libros`
+--
+ALTER TABLE `libros`
+  ADD PRIMARY KEY (`id_libro`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -74,6 +82,12 @@ ALTER TABLE `usuarios`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `libros`
+--
+ALTER TABLE `libros`
+  MODIFY `id_libro` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
