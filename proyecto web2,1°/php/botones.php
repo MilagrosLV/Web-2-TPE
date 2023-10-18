@@ -1,5 +1,5 @@
 <?php
-require_once 'bibloteca.php';
+require_once 'biblioteca_admin.php';
 
 // Recopila los datos del formulario (sustituye los nombres de los campos según tu formulario)
 $titulo = $_POST['titulo'];

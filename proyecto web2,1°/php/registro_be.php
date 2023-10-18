@@ -26,7 +26,7 @@ if($ejecutar){
     echo '
     <script>
     alert("Los datos de usuario no fueron guardados y entonce hubo un error");
-    window.Location= "../index.php";
+    window.Location= "../php/index.php";
     </script>
     ';
 }

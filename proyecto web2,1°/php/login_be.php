@@ -21,7 +21,7 @@ if(mysqli_num_rows($verificar_login) > 0){
     echo '
     <script>
     alert("Los datos de usuarios se registraron correctamente");
-    window.location = "../php/ingreso1.php";
+    window.location = "../php/ingreso_admin.php";
     </script>
     ';
     exit;  
