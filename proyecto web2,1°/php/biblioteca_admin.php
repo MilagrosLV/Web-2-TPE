@@ -21,7 +21,7 @@
                 <img src="../images/pagina/logo2.jpg"  class="logo">
             </div>
             <div>
-            <a class="registro" href="../php/ingreso_admin.php"><h3>Cerrar sesión</h2></a>
+            <a class="registro" href="../php/ingreso.php"><h3>Cerrar Sesión</h2></a>
             </div>
         </div>
         <div class="inferior">
@@ -101,7 +101,7 @@
         </div>
         <div class="contenedor">
             <div class="libro">
-                <div class="portada-libro">
+                <div class="portada-libro" id="Romances">
                 <img src="../images/romances/after2.jpg" alt="Portada del libro" class="foto-de-libro9">
                 </div>
                 <div action="../php/ediccion.php" method="POST" class="informacion-libro">
