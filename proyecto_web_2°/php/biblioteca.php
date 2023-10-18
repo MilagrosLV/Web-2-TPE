@@ -56,10 +56,10 @@
                 recursos educativos.</p>
             <p>Explora y disfruta de la lectura desde cualquier lugar a través de tu dispositivo conectado a internet.
             </p>
-            <p id="aventuras">Accede a una gran variedad de contenidos, realiza búsquedas avanzadas y disfruta de la
+            <p>Accede a una gran variedad de contenidos, realiza búsquedas avanzadas y disfruta de la
                 comodidad de una
                 biblioteca en línea.</p>
-            <img src="../images/pagina/biblioteca.png" alt="Imagen de la biblioteca" class="foto-de-libro" />
+                <img src="../images/pagina/biblioteca_admin.png" alt="Imagen de la biblioteca" class="foto-de-libro" />
         </div>
         <div class="contenedor">
             <h2>Aventuras</h2>
@@ -67,33 +67,27 @@
             <p>En el género de aventuras, los personajes se embarcan en emocionantes viajes llenos de peligros y
                 desafíos, explorando mundos desconocidos y enfrentándose a situaciones extraordinarias.</p>
         </div>
+
         <div class="contenedor">
             <div class="libro">
                 <div class="portada-libro">
-                    <img src="../images/fantasias/libro1.jpg" alt="Portada del libro" class="foto-de-libro1">
+                <img src="../images/fantasias/libro1.jpg" alt="Portada del libro" class="foto-de-libro1">
                 </div>
-                <div class="informacion-libro">
-                    <h2>Juego de tronos</h2>
-                    <p>Tras el largo verano, el invierno se acerca a los Siete Reinos. Lord Eddard Stark, señor de
-                        Invernalia, deja sus dominios para unirse a la corte del rey Robert Baratheon el Usurpador,
-                        hombre díscolo y otrora guerrero audaz cuyas mayores aficiones son comer, beber y engendrar
-                        bastardos. Eddard Stark desempeñará el cargo de Mano del Rey e intentará desentrañar una maraña
-                        de intrigas que pondrá en peligro su vida... y la de los suyos. En un mundo cuyas estaciones
-                        duran décadas y en el que retazos de una magia inmemorial y olvidada surgen en los rincones más
-                        sombrios y maravillosos, la traición y la lealtad, la compasión y la sed de venganza, el amor y
-                        el poder hacen del juego de tronos una poderosa trampa que atrapa en sus fauces a los
-                        personajes... y al lector.</p>
+                <div action="../php/ediccion.php" method="POST" class="informacion-libro">
+                    <h2 name="titulo">Juego de tronos</h2>
+                    <p name="descripcion">Tras el largo verano, el invierno se acerca a los Siete Reinos.</p>
                 </div>
             </div>
         </div>
+        
         <div class="contenedor">
             <div class="libro">
                 <div class="portada-libro">
-                    <img src="../images/fantasias/libro4.jpg" alt="Portada del libro" class="foto-de-libro2">
+                <img src="../images/fantasias/libro4.jpg" alt="Portada del libro" class="foto-de-libro2">
                 </div>
-                <div class="informacion-libro">
-                    <h2>La quinta estación</h2>
-                    <p>La quinta estación (título original en inglés: The Fifth Season) es una novela de ficción
+                <div action="../php/ediccion.php" method="POST" class="informacion-libro">
+                    <h2 name="titulo">La quinta estación</h2>
+                    <p name="descripcion">La quinta estación (título original en inglés: The Fifth Season) es una novela de ficción
                         especulativa escrita por la autora estadounidense N. K. Jemisin y publicada en agosto de 2015
                         por la editorial Orbit Books. La edición en español ha sido publicada en mayo de 2017 por
                         Ediciones B dentro de su sello NOVA. La obra recibió en 2016 el premio Hugo a la mejor novela, y
@@ -102,23 +96,25 @@
                         "Trilogía de la Tierra Fragmentada"..</p>
                 </div>
             </div>
-            
         </div>
+
         <div class="contenedor">
             <div class="libro">
-                <div class="portada-libro">
-                    <img src="../images/fantasias/libro5.jpg" alt="Portada del libro" class="foto-de-libro3">
-                </div>
-                <div class="informacion-libro">
-                    <h2>Los jovenes de la elite</h2>
-                    <p>Comienza la explosiva saga de fantasía número 1 del New York Times. Los supervivientes de la
-                        fiebre de la sangre, una enfermedad que arrasó Kenettra hace diez años, son admirados y temidos
-                        a partes iguales.</p>
+                <div class="portada-libro" id="Romances">
+                <img src="../images/romances/after2.jpg" alt="Portada del libro" class="foto-de-libro9">
+            </div>
+                <div action="../php/ediccion.php" method="POST" class="informacion-libro">
+                    <h2 name="titulo">After</h2>
+                    <p name="descripcion" >Tessa Young acaba de llegar a la universidad, y su estable y ordenada vida da un giro busco al
+                        conocer al misterioso Hardin Scott, cuyo pasado es algo oscuro. Aunque de entrada se odian,
+                        estos polos opuestos se unirán y nada volverá a ser como antes. Tendrán que enfrentarse
+                        amultiples pruebas como la inocencia y el descubrimiento sexual, para poder estar juntos.
+                    </p>
                 </div>
             </div>
-            
         </div>
     </div>
+
     <footer>
         <h5>esta pagina fue creada para ser una libreria virtual para leer y recomendar libro (fue creada el dia
             05/10/2023)</h5>

@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<header>
+    <header>
         <div class="superior">
             <div class="logo-pagina">
                 <h1>Libreria alejandría</h1>
@@ -47,7 +47,7 @@
                 </nav>
             </div>
         </div>
-        </header>
+    </header>
     <div class="contenido-principal">
         <div class="contenedor">
             <h1>Biblioteca</h1>
@@ -60,12 +60,14 @@
                 biblioteca en línea.</p>
                 <img src="../images/pagina/biblioteca_admin.png" alt="Imagen de la biblioteca" class="foto-de-libro" />
         </div>
+
         <div class="contenedor">
             <h2>Aventuras</h2>
             <img src="../images/fantasias/literatura-fantastica.jpg">
             <p>En el género de aventuras, los personajes se embarcan en emocionantes viajes llenos de peligros y
                 desafíos, explorando mundos desconocidos y enfrentándose a situaciones extraordinarias.</p>
         </div>
+        
         <div class="contenedor">
             <div class="libro">
                 <div class="portada-libro">
@@ -79,6 +81,7 @@
             <button class="editar-libro" onclick="editarLibro(this)">Editar</button>
             <button class="borrar-libro" onclick="borrarLibro(this)">Borrar</button>
         </div>
+
         <div class="contenedor">
             <div class="libro">
                 <div class="portada-libro">
@@ -99,29 +102,31 @@
             <button class="editar-libro" onclick="editarLibro(this)">Editar</button>
             <button class="borrar-libro" onclick="borrarLibro(this)">Borrar</button>
         </div>
+
         <div class="contenedor">
             <div class="libro">
                 <div class="portada-libro" id="Romances">
                 <img src="../images/romances/after2.jpg" alt="Portada del libro" class="foto-de-libro9">
-                </div>
+            </div>
                 <div action="../php/ediccion.php" method="POST" class="informacion-libro">
                     <h2 name="titulo">After</h2>
                     <p name="descripcion" >Tessa Young acaba de llegar a la universidad, y su estable y ordenada vida da un giro busco al
                         conocer al misterioso Hardin Scott, cuyo pasado es algo oscuro. Aunque de entrada se odian,
                         estos polos opuestos se unirán y nada volverá a ser como antes. Tendrán que enfrentarse
-                        amultiples pruebas como la inocencia y el descubrimiento sexual, para poder estar juntos.</p>
+                        amultiples pruebas como la inocencia y el descubrimiento sexual, para poder estar juntos.
+                    </p>
                 </div>
             </div>
-
             <button class="editar-libro" onclick="editarLibro(this)">Editar</button>
             <button class="borrar-libro" onclick="borrarLibro(this)">Borrar</button>
         </div>
     </div>
-    </div>
+
     <script src="../js/funcion_B_E.js"></script>
     <script src="../js/Editar_Libros.js"></script>
     <script src="../js/Borrar_Libros.js"></script>
     <script src="../js/carrito.js"></script>
+
     <footer>
         <h5>esta pagina fue creada para ser una libreria virtual para leer y recomendar libro (fue creada el dia 05/10/2023)</h5>
     </footer>
