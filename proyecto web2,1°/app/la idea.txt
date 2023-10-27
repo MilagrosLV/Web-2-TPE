@@ -1,0 +1,4 @@
+Esta app setrata una libreria virtual que es una tienda libro que maneja tres 
+generos que son fantasia, misterio y romanse. Aunque en futuro si queremos usarla
+como proyecto o ser parte de la carpecta de presentacion le haremos modificaciones
+e agregaremos mas generos y libros

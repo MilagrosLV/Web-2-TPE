@@ -1,0 +1,2 @@
+Aqui alojamos sql osea la base de datos que genera las tablas que nesesitamos 
+y que usaremos con la pagina para su uso como la de usuario

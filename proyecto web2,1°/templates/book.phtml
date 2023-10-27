@@ -1,0 +1,21 @@
+<?php require './templates/header.phtml' ?>
+<div class="contenedor-libro">
+    <h1 class='titulo-libro'><?= $book->nombreLibro ?></h1>
+    <div class="contenedor-imagen-libro">
+        <img class="imagen-libro" src="<?= $book->imagen ?>">
+    </div>
+    <p class="fecha-libro">
+        Fecha de lanzamiento: <?= $book->fechaLanzamiento ?>
+    </p>
+    <p class="autores/autoras-libro">
+        Desarrollador: <?= $book->nombreAutores ?>
+    </p>
+    <p class="descripcion-libro">
+        <?= $book->descripcionlibro ?>
+    </p>
+    <p class="edad-libro">
+        libro apto para mayores de <?= $book->edad ?> años.
+    </p>
+
+</div>
+<?php require './templates/footer.phtml' ?>

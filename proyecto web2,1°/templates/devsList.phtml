@@ -1,0 +1,35 @@
+<?php require './templates/header.phtml' ?>
+
+<?php if(AuthHelper::isLogged()): ?>
+<div class='detalles-autores'>
+    <a href='add-developer' class='btn btn-success'>+ Agregar</a>
+</div>
+<?php endif ?>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha de creación</th>
+            <th scope="col">Origen</th>
+            <?php if(AuthHelper::isLogged()): ?>
+            <th scope="col">Edición</th>
+            <?php endif ?>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($devs as $dev): ?>
+        <tr>
+            <td><?= $dev->nombreAutor ?></td>
+            <td><?= $dev->fechaCreacion ?></td>
+            <td><?= $dev->origen ?></td>
+            <?php if(AuthHelper::isLogged()): ?>
+            <td><a href='edit-dev/<?= $dev->autoresId ?>' class="btn btn-warning">Editar</a><a href='delete-dev/<?= $dev->autoresId ?>' class="btn btn-danger">Borrar</a></td>
+            <?php endif ?>
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+</table>
+
+
+<?php require './templates/footer.phtml' ?>

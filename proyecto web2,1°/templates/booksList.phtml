@@ -1,0 +1,47 @@
+<?php require './templates/header.phtml' ?>
+
+<div class='detalles-juegos'>
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" data-bs-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
+        Filtrar por desarrollador
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="books">Mostrar todos</a>
+        <?php foreach($devs as $dev): ?>
+        <a class="dropdown-item" href="books/developer/<?= $dev->desarrolladorId ?>"><?= $dev->nombreDesarrollador ?></a>
+        <?php endforeach ?>
+    </div>
+    <?php if(AuthHelper::isLogged()): ?>
+    <div>
+        <a href='add-book' class='btn btn-success'>+ Agregar</a>
+    </div>
+    <?php endif ?>
+</div>
+
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Escritor/Escritora</th>
+            <th scope="col">Fecha de lanzamiento</th>
+            <th scope="col">Edad mínima</th>
+            <?php if(AuthHelper::isLogged()): ?>
+            <th scope="col">Edición</th>
+            <?php endif ?>
+        </tr>
+    </thead>
+    <tbody>
+    <?php foreach($books as $book): ?>
+        <tr>
+            <td><a class="listed-book-title" href='book/<?= $book->libroId ?>'><?= $book->nombreLibro ?></a></td>
+            <td><?= $book->nombreAutores ?></td>
+            <td><?= $book->fechaLanzamiento ?></td>
+            <td><?= $book->edad ?></td>
+            <?php if(AuthHelper::isLogged()): ?>
+            <td><a href='edit-book/<?= $book->libroId ?>' class="btn btn-warning">Editar</a><a href='delete-book/<?= $book->libroId ?>' class="btn btn-danger">Borrar</a></td>
+            <?php endif ?>
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+</table>
+
+<?php require './templates/footer.phtml' ?>
