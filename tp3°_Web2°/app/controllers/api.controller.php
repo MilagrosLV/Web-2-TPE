@@ -14,3 +14,4 @@
             return json_decode($this->data);
         }
     }
+    

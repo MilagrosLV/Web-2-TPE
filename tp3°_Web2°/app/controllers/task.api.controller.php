@@ -85,9 +85,9 @@
                 $prioridad = $body->prioridad;
                 $this->model->updateTaskData($id, $titulo, $descripcion, $prioridad);
 
-                $this->view->response('La tarea con id='.$id.' ha sido modificada.', 200);
-            } else {
-                $this->view->response('La tarea con id='.$id.' no existe.', 404);
+                $this->view->response('La tarea con id='.$id.' ha sido modificada.', 200 or 201);
+            }else {
+                $this->view->response('La tarea con id='.$id.' no existe.', 400 or 404);
             }
         }
     }

@@ -9,6 +9,12 @@
     max-width:800px;
     border-radius: 10px;
 }
+.fondo-imagen {
+    background-image: url('../imagenes/pagina/fondo_traparente.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 h1 {
     text-align: center;
     font-size: 36px;
@@ -23,18 +29,55 @@ p {
     color: rgb(0, 0, 0);
     font-weight: 600;
 }
+
 img {
     display: block;
     margin: 0 auto;
     max-width: 300px;
 }
 
+.img {
+    width: 50px; /* Tamaño del círculo y la imagen */
+    height: 50px;
+    border-radius: 50%; /* Crea un círculo */
+    background-color: white; /* Fondo blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.img img {
+    width: 50px; /* Ajusta la imagen para llenar el círculo */
+    height: auto;
+}
 footer {
     text-align: center;
     background-color: #000000;
     color: gold; 
     padding: 10px;
     margin-top: 0px;
+}
+
+.navbar {
+    background-color: black; 
+}
+
+.navbar .navbar-brand {
+    color: gold; 
+}
+
+.navbar .nav-link {
+    color: gold; 
+}
+
+.navbar-toggler-icon {
+    background-color: gold; 
+}
+
+.bg-black {
+    background-color: black !important;
+    color: gold; 
 }
 
 .contenido-principal {
