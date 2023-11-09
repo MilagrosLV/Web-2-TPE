@@ -13,31 +13,34 @@
 
         function get($params = []) {
             if (empty($params)){
-                $tareas = $this->model->getTasks();
-                $this->view->response($tareas, 200);
+                $sugerencias = $this->model->getTasks();
+                $this->view->response($sugerencias, 200);
             } else {
-                $tarea = $this->model->getTask($params[':ID']);
-                if(!empty($tarea)) {
+                $sugerencia = $this->model->getTask($params[':ID']);
+                if(!empty($sugerencia)) {
                     if($params[':subrecurso']) {
                         switch ($params[':subrecurso']) {
                             case 'titulo':
-                                $this->view->response($tarea->titulo, 200);
+                                $this->view->response($sugerencia->titulo, 200);
                                 break;
-                            case 'descripcion':
-                                $this->view->response($tarea->descripcion, 200);
+                            case 'genero':
+                                $this->view->response($sugerencia->genero, 200);
+                                break;
+                            case 'descripción':
+                                $this->view->response($sugerencias->descripción, 200);
                                 break;
                                 
                             default:
                             $this->view->response(
-                                'La tarea no contiene '.$params[':subrecurso'].'.'
+                                'La sugerencia no contiene '.$params[':subrecurso'].'.'
                                 , 404);
                                 break;
                         }
                     } else
-                        $this->view->response($tarea, 200);
+                        $this->view->response($sugerencia, 200);
                 } else {
                     $this->view->response(
-                        'La tarea con el id='.$params[':ID'].' no existe.'
+                        'La sugerencia con el id='.$params[':ID'].' no existe.'
                         , 404);
                 }
             }
@@ -45,13 +48,13 @@
 
         function delete($params = []) {
             $id = $params[':ID'];
-            $tarea = $this->model->getTask($id);
+            $sugerencia = $this->model->getTask($id);
 
-            if($tarea) {
+            if($sugerencia) {
                 $this->model->deleteTask($id);
-                $this->view->response('La tarea con id='.$id.' ha sido borrada.', 200);
+                $this->view->response('La sugerencia con id='.$id.' ha sido borrada.', 200);
             } else {
-                $this->view->response('La tarea con id='.$id.' no existe.', 404);
+                $this->view->response('La sugerencia con id='.$id.' no existe.', 404);
             }
         }
 
@@ -59,35 +62,37 @@
             $body = $this->getData();
 
             $titulo = $body->titulo;
-            $descripcion = $body->descripcion;
+            $genero = $body->genero;
+            $descripción = $body->descripción;
             $prioridad = $body->prioridad;
 
             if (empty($titulo) || empty($prioridad)) {
                 $this->view->response("Complete los datos", 400);
             } else {
-                $id = $this->model->insertTask($titulo, $descripcion, $prioridad);
+                $id = $this->model->insertTask($titulo, $genero, $descripción, $prioridad);
 
                 // en una API REST es buena práctica es devolver el recurso creado
-                $tarea = $this->model->getTask($id);
-                $this->view->response($tarea, 201);
+                $sugerencia = $this->model->getTask($id);
+                $this->view->response($sugerencia, 201);
             }
     
         }
 
         function update($params = []) {
             $id = $params[':ID'];
-            $tarea = $this->model->getTask($id);
+            $sugerencia = $this->model->getTask($id);
 
-            if($tarea) {
+            if($sugerencia) {
                 $body = $this->getData();
                 $titulo = $body->titulo;
-                $descripcion = $body->descripcion;
+                $genero = $body->genero;
+                $descripción = $body->descripción;
                 $prioridad = $body->prioridad;
-                $this->model->updateTaskData($id, $titulo, $descripcion, $prioridad);
+                $this->model->updateTask($id);
 
-                $this->view->response('La tarea con id='.$id.' ha sido modificada.', 200 or 201);
+                $this->view->response('La sugerencia con id='.$id.' ha sido modificada.', 200 or 201);
             }else {
-                $this->view->response('La tarea con id='.$id.' no existe.', 400 or 404);
+                $this->view->response('La sugerencia con id='.$id.' no existe.', 400 or 404);
             }
         }
     }

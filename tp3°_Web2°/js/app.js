@@ -1,6 +1,6 @@
 "use strict"
 
-const URL = "api/tareas/";
+const URL = "api/sugerencias/";
 
 let tasks = [];
 
@@ -9,7 +9,7 @@ form.addEventListener('submit', insertTask);
 
 
 /**
- * Obtiene todas las tareas de la API REST
+ * Obtiene todas las sugerencias de la API REST
  */
 async function getAll() {
     try {
@@ -34,7 +34,8 @@ async function insertTask(e) {
     let data = new FormData(form);
     let task = {
         titulo: data.get('titulo'),
-        descripcion: data.get('descripcion'),
+        genero: data.get('genero'),
+        descripción: data.get('descripción'),
         prioridad: data.get('prioridad'),
     };
 
@@ -79,8 +80,43 @@ async function deleteTask(e) {
 
 async function finalizeTask(e) {
     e.preventDefault();
-    alert('El Aceptar para finalizar la tarea esta incompleto :)')
+    
+    const id = e.target.dataset.task;
+    const taskToFinalize = tasks.find(task => task.id == id);
+
+    // Verificar si se encontró la tarea
+    if (taskToFinalize) {
+        // Mostrar un cuadro de diálogo de confirmación
+        const confirmMessage = `¿Deseas finalizar la tarea "${taskToFinalize.titulo}"?`;
+        const confirmed = window.confirm(confirmMessage);
+
+        if (confirmed) {
+            // Realizar una solicitud a la API REST para finalizar la tarea
+            try {
+                const response = await fetch(URL + id, {
+                    method: 'PUT', // O usa PATCH si prefieres actualizar parcialmente
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ finalizada: 1 })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Error del servidor');
+                }
+
+                // Actualizar la tarea en el arreglo global de sugerencias
+                const index = tasks.findIndex(task => task.id == id);
+                if (index !== -1) {
+                    tasks[index].finalizada = 1; // Marcar la tarea como finalizada
+                }
+
+                showTasks(); // Actualizar la lista de sugerencias
+            } catch (error) {
+                console.log(error);
+            }
+        }
+    }
 }
+
 
 function showTasks() {
     let ul = document.querySelector("#task-list");
@@ -92,9 +128,9 @@ function showTasks() {
                     list-group-item d-flex justify-content-between align-items-center
                     ${ task.finalizada == 1 ? 'finalizada' : ''}
                 '>
-                <span> <b>${task.titulo}</b> - ${task.descripcion} (prioridad ${task.prioridad}) </span>
+                <span> <b>${task.titulo}</b> - ${task.descripción} -Genero de tipo ${task.genero} (prioridad ${task.prioridad}) </span>
                 <div class="ml-auto">
-                    ${task.finalizada != 1 ? `<a href='#' data-task="${task.id}" type='button' class='btn btn-success mybutton btn-finalize'>Aceptar</a>` : ''}
+                    ${task.finalizada != 1 ? `<a href='#' data-task="${task.id}" type='button' class='btn btn-success mybutton btn-finalize'>Finalizar</a>` : ''}
                     <a href='#' data-task="${task.id}" type='button' class='btn btn-danger mybutton btn-delete'>Eliminar</a>
                 </div>
             </li>

@@ -15,34 +15,35 @@
                 // Si no hay crearlas
                 $sql =<<<END
                 --
-                -- Estructura de tabla para la tabla `tareas`
+                -- Estructura de tabla para la tabla `sugerencias`
                 --
                 
-                CREATE TABLE `tareas` (
+                CREATE TABLE `sugerencias` (
                   `id` int(11) NOT NULL,
                   `titulo` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-                  `descripcion` text COLLATE utf8_unicode_ci DEFAULT NULL,
-                  `prioridad` int(11) NOT NULL,
+                  `descripción` text COLLATE utf8_unicode_ci DEFAULT NULL,
+                  `genero` int(12) NOT NULL,
+                  `prioridad` int(12) NOT NULL,
                   `finalizada` tinyint(1) NOT NULL DEFAULT 0
                 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
                 
                 --
-                -- Volcado de datos para la tabla `tareas`
+                -- Volcado de datos para la tabla `sugerencias`
                 --
                 
-                INSERT INTO `tareas` (`id`, `titulo`, `descripcion`, `prioridad`, `finalizada`) VALUES
+                INSERT INTO `sugerencias` (`id`, `titulo`, `genero`, `descripción`, `prioridad`, `finalizada`) VALUES
                 (25, 'asdsa', 'asdasd', 1, 0),
-                (26, 'Titulo modificado', 'Una descripcion', 87, 0),
-                (27, 'Nuevo titulo', 'Otra descripcion', 2, 0);
+                (26, 'Titulo modificado', 'Una descripción', 87, 0),
+                (27, 'Nuevo titulo', 'Otra descripción', 2, 0);
                 
                 --
                 -- Índices para tablas volcadas
                 --
                 
                 --
-                -- Indices de la tabla `tareas`
+                -- Indices de la tabla `sugerencias`
                 --
-                ALTER TABLE `tareas`
+                ALTER TABLE `sugerencias`
                   ADD PRIMARY KEY (`id`);
                 
                 --
@@ -50,9 +51,9 @@
                 --
                 
                 --
-                -- AUTO_INCREMENT de la tabla `tareas`
+                -- AUTO_INCREMENT de la tabla `sugerencias`
                 --
-                ALTER TABLE `tareas`
+                ALTER TABLE `sugerencias`
                   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
                 COMMIT;
                 END;
